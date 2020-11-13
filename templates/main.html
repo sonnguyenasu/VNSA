@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="stylesheet" href="static/s2.css">
+   <title>Demo</title>
+</head>
+
+<body style="background-color: rgba(255,255,255,0.5);">
+
+   <center>
+      <h1 id='title' style="position: relative;top:0px;left:55vw;">Welcome to demo</h1>
+   </center>
+   <div
+      style="z-index: -10;position: absolute;top:10px;left:20px;background-image: url('http://s2.favim.com/orig/36/cat-cute-gif-hat-Favim.com-295751.gif'); height:200px;width:400px;">
+   </div>
+   <div style="position: absolute;top:60vh;width:100vw;">
+      {% include "./comment.html" %}
+      {% block comment %}{% endblock %}
+      {% include "./result.html" %}
+      {% block res %}{% endblock %}
+   </div>
+
+   <script>document.getElementById("result").readOnly = true;
+      document.getElementById("result").style.backgroundColor = 'white';</script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

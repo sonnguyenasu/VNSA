@@ -1,0 +1,22 @@
+<div
+    style='position: absolute;top:50%; width: 100%;height:40vh;transform: translateY(-50%);padding-left:10%; background-color: rgba(255,255,255,0.87);'>
+
+    <form action="{{ url_for('result') }}" method="POST" role="form" style='width:45%;display: inline-block;'>
+
+        <div class="form-group">
+            <label for="name">Test Comment</label>
+            <textarea class="form-control" rows="5" name='comment' placeholder="Comment"></textarea>
+        </div>
+        <select name='methods' class="form-control" id="exampleFormControlSelect1"
+            style="width:200px;display: inline-block;">
+            <option>Decision Tree</option>
+            <option>k Nearest Neighbors</option>
+            <option>Naive Bayes</option>
+        </select>
+        <input type="submit" class="btn btn-outline-success" style='display: inline-block;height:100%;'
+            value="submit" />
+        <!-- <button type="button" class="btn btn-outline-success" style='display: inline-block;height:100%;'>Submit</button> -->
+
+        <!-- <button type="button" class="btn btn-outline-success">Submit</button> -->
+    </form>
+</div>
