@@ -16,7 +16,7 @@
       <h1 id='title' style="position: relative;top:0px;left:55vw;">Welcome to demo</h1>
    </center>
    <div
-      style="z-index: -10;position: absolute;top:10px;left:20px;background-image: url('http://s2.favim.com/orig/36/cat-cute-gif-hat-Favim.com-295751.gif'); height:200px;width:400px;">
+      style="z-index: -10;position: absolute;top:10px;left:20px;background-image: url('https://bestanimations.com/media/cats/608000676cute-kitty-animated-gif-26.gif');background-size:400px 200px; height:200px;width:400px;">
    </div>
    <div style="position: absolute;top:60vh;width:100vw;">
       {% include "./comment.html" %}
@@ -36,6 +36,12 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"></script>
+   <script>$("#comment").keypress(function (e) {
+         if (e.which == 13 && !e.shiftKey) {
+            $(this).closest("form").submit();
+            e.preventDefault();
+         }
+      });</script>
 </body>
 
 </html>
