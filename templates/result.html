@@ -7,7 +7,8 @@
             <div class="form-control" id='result' rows="10"
                 style="height:40vh;background-color: rgba(255,255,255,0.87);">{{result}}
                 <br>{% for i in range(len) %}{%if i not in index%}{{' '.join(sentence.split()[i].split('_'))+' '}}{%else%}<span
-                    style="color: red;">{{' '.join(sentence.split()[i].split('_')) + ' '}}</span>{%endif%}{% endfor %}</textarea>
+                    style="color: red;">{{' '.join(sentence.split()[i].split('_')) + ' '}}</span>{%endif%}{% endfor %}
+
             </div>
 
         </div>

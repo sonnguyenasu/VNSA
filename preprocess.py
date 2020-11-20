@@ -14,7 +14,7 @@ def normalize_text(text):
 
     #Remove các ký tự kéo dài: vd: đẹppppppp
     text = re.sub(r'([A-Z])\1+', lambda m: m.group(1).upper(), text, flags=re.IGNORECASE)
-
+	
     # Chuyển thành chữ thường
     text = text.lower()
 
@@ -78,10 +78,21 @@ def normalize_text(text):
         '6 sao': ' 5star ','6 star': ' 5star ', '5star': ' 5star ','5 sao': ' 5star ','5sao': ' 5star ',
         'starstarstarstarstar': ' 5star ', '1 sao': ' 1star ', '1sao': ' 1star ','2 sao':' 1star ','2sao':' 1star ',
         '2 starstar':' 1star ','1star': ' 1star ', '0 sao': ' 1star ', '0star': ' 1star ',}
-
-    for k, v in replace_list.items():
-        text = text.replace(k, v)
-
+    tex = text.split()
+    txt = []
+    for te in tex:
+        t = ''
+        rep = False
+        for k, v in replace_list.items():
+            #t = 
+            if te == k: 
+                print(v)
+                txt.append(v)
+                rep = True
+        if not rep:
+            txt.append(te)
+    print('txt',txt)
+    text = ' '.join(txt)
     # chuyen punctuation thành space
     translator = str.maketrans(string.punctuation, ' ' * len(string.punctuation))
     text = text.translate(translator)

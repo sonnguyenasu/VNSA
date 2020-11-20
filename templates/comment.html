@@ -5,10 +5,12 @@
 
         <div class="form-group">
             <label for="name">Test Comment</label>
-            <textarea class="form-control" rows="5" name='comment' id='comment' placeholder="Comment"></textarea>
+            <textarea class="form-control" rows="5" name='comment' id='comment'
+                placeholder="Comment">{{ sentence }}</textarea>
         </div>
         <select name='methods' class="form-control" id="exampleFormControlSelect1"
             style="width:200px;display: inline-block;">
+            <option selected>{{method}}</option>
             <option>SVM</option>
             <option>Naive Bayes</option>
             <option>Decision Tree</option>
